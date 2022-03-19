@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #navbar{
+            height: 50px;
+            display: grid;
+            grid-template-columns: 55% 15% 10%;
+            background-color: coral;
+            color: teal;
+            font-size: 15px;
+            justify-content: space-around;
+            margin-bottom: 30px;
+           
+        }
+        #navbar>div{
+            margin-top: 16px;
+        }
+        #con{
+             
+            border: 1px solid red;
+
+        }
+        #con1{
+            height: 300px;
+            width: 460px;
+            border: 1px solid red;
+           margin-top: 30px;
+           margin-left: 35%;
+           background-color: teal;
+           margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav"></div>
+    <div id="con1"></div>
+    <div id="con"></div>
+    
+</body>
+</html>
+<script type="module">
+import navbar from "./components/nav.js";
+var res=document.querySelector("#nav")
+res.innerHTML=navbar();
+
+
+
+let item=JSON.parse(localStorage.getItem("item"));
+
+console.log(item);
+item.map(function (ele){
+    let div=document.createElement("div");
+    div.style.display="flex"
+div.style.color="coral";
+
+let div1=document.createElement("div");
+div1.style.fontSize="30px"
+div1.style.marginLeft="40px"
+
+let div2=document.createElement("div");
+div2.style.fontSize="30px"
+div2.style.marginLeft="50px"
+
+let p1=document.createElement("p");
+p1.textContent=ele.strMeal;
+
+let image=document.createElement("img");
+image.src=ele.strMealThumb;
+image.style.width="300px";
+
+let p2=document.createElement("ol");
+p2.textContent="Ingredients";
+
+let p3=document.createElement("li");
+p3.textContent=ele.strIngredient1;
+let p4=document.createElement("li");
+p4.textContent=ele.strIngredient2;
+let p5=document.createElement("li");
+p5.textContent=ele.strIngredient3;
+let p6=document.createElement("li");
+p6.textContent=ele.strIngredient4;
+let p7=document.createElement("li");
+p7.textContent=ele.strIngredient5;
+
+
+let p8=document.createElement("p");
+p8.textContent="Recipe"+"-"+ele.strInstructions;
+
+
+let iframe=document.createElement("iframe")
+iframe.src=`  ${ele.strYoutube}`
+iframe.width="100%";
+iframe.height="100%";
+iframe.style.marginBottom="40px";
+
+
+iframe.setAttribute("Allowfullscreen",true);
+
+var btn =document.createElement("button")
+btn.textContent="Order Now";
+btn.style.height="30px";
+btn.style.width="120px";
+btn.style.background="coral";
+btn.onclick=fun
+
+
+
+let key="AIzaSyCbnJm23l_LXdtjxkGxdl3xuQFh9nmG_Y8";
+
+div2.append(p2,p3,p4,p5,p6,p7,p8,btn);
+
+div1.append(p1,image)
+div.append(div1,div2);
+document.querySelector("#con").append(div);
+document.querySelector("#con1").append(iframe);
+
+function fun(){
+
+   window.location.href="order.html"
+}
+})
+
+</script>

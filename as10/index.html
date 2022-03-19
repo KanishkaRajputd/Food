@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar{
+            height: 50px;
+            display: grid;
+            grid-template-columns: 20% 40% 15% 10%;
+            background-color: coral;
+            color: teal;
+            font-size: 15px;
+            justify-content: space-around;
+        }
+        #navbar>div{
+            margin-top: 16px;
+        }
+        #con{
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+           justify-content: space-around;
+        }
+        #navbar>div:nth-child(2){
+            border: 1px solid none;
+        margin-top: .7%;
+        }
+        input{
+            height: 95%;
+            width: 70%;
+        }
+        @media screen and (min-width:0px) and (max-width:720px){
+        
+        #con{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns:40% 40%;
+       grid-template-rows: 460px;
+        justify-content: space-around;
+    } input{
+            height: 95%;
+            width: 60%;
+        }
+    }
+
+
+    </style>
+</head>
+<body>
+    <div id="nav"> 
+         <div id="navbar">
+        <div><a style="text-decoration: none;color: teal;" href="index.html">KHUSHIYA</a></div>
+       <div id="s"><input type="search" id="search" placeholder="Search for food">
+    <button onclick="myfun()">Find here</button>
+    </div>
+        <div><a style="text-decoration: none;color: teal;" href="oftheday.html">Today's Spacial</a></div>
+        <div><a style="text-decoration: none;color: teal;" href="Location.html">Location</a></div>
+         </div>
+        </div>
+    <div id="con"></div>
+</body>
+</html>
+<script  src="index.js" ></script>

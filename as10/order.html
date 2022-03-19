@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        #top{
+            display: flex;
+            background-color: #E2DBC8;
+        }
+        #mainDiv{
+            width: 440px;
+            border: 1px solid black;
+            margin: auto;
+            height: 630px;
+        }
+        #Head>img{
+            margin: 20px;
+            width: 120px;
+        }
+        #languageSelect{
+            width: 440px;
+            background-color: #BBB5A3;
+            height: 40px;
+        }
+        #language{
+            background-color: #BBB5A3;
+            height: 30px;
+            border: 0px;
+            font-size: 20px;
+            padding-left: 15px;
+        }
+        #iseBharLena{
+            border: 1px solid black;
+            width: 380px;
+            display: flex;
+            height: 60px;
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+        #bottom{
+            height: 430px;
+            overflow-y: scroll;
+        }
+        #iseBharLena>p{
+            font-size: 20px;
+        }
+        #bottom>p{
+          margin-left: 20px;
+        }
+        #bottom>img{
+          margin-left: 20px;
+          width: 385px;
+        }
+        #bottom>img:hover{
+            border: 1px solid black;
+        }
+        #id p{
+          font-size: 20px;
+          margin-bottom: -10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainDiv">
+      <div id="top">
+     
+        <div id="id">
+            <p>KHUSHIYA - #26685545578563</p>
+            <h1 id="price_p">$200</h1>
+        </div>
+      </div>
+        <div id="languageSelect">
+            <select name="" id="language">
+                <option value="">English</option>
+                <option value="">हिंदी</option>
+                <option value="">haryavni</option>
+                <option value="">Punjabi</option>
+            </select>
+        </div>
+
+        <div id="bottom">
+            <div id="iseBharLena">
+               <img src="./ph no box.PNG" alt="">
+               <p id="phnumber"></p>
+            </div>
+            <p>PREFERRED PAYMENT METHOD</p>
+            <img src="./Capture1.PNG" alt="">
+            <p>FREQUENTLY USED METHOD</p>
+            <img src="./Capture2.PNG" alt="">
+            <p>UPI, NETBANKING & MORE</p>
+             <img src="./Capture3.PNG" alt="">
+             <img src="./Capture4.PNG" alt="">
+             <img src="./Capture5.PNG" alt="">
+             <img src="./Capture6.PNG" alt="">
+             <img src="./Capture7.PNG" alt="">
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var number=JSON.parse(localStorage.getItem('phnumber'))
+    var s= document.querySelector("#phnumber");
+    s.textContent="8958543211";
+    var price=JSON.parse(localStorage.getItem('price'))
+    var p=document.querySelector("#price_p")
+    p.textContent=`Rs. ${200}`; 
+    document.querySelector("#bottom").addEventListener("click",function(){
+       alert("Payment Successfull");
+        
+       let id=setTimeout(()=>{
+        
+            alert('Buy More');
+            window.location.href='index.html';
+           
+       },1500);
+     
+
+
+    });
+</script>
