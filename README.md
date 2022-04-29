@@ -1,6 +1,6 @@
 # Food-Website
 
-<p id="description">A simple food website</p>
+<p id="description">A simple food website which has so many dishes .You can search and order</p>
 
 <p>Snap-Shot</p>
 <img src="https://github.com/KanishkaRajputd/Kanishka-Portfolio/raw/main/src/assets/food.png"/>
