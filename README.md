@@ -1,7 +1,9 @@
-# Food
+# Food-Website
 
 <p id="description">A simple food website</p>
 
+<p>Snap-Shot</p>
+<img src="https://github.com/KanishkaRajputd/Kanishka-Portfolio/raw/main/src/assets/food.png"/>
 <h2>🚀 Demo</h2>
 
 [https://foodieskhushy.netlify.app/](https://foodieskhushy.netlify.app/)
